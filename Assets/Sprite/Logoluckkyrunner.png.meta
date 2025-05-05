@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Logoluckkyrunner_0: -2595487496186822319
+      Logoluckkyrunner_1: -8585947495309247967
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
