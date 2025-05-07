@@ -9,8 +9,8 @@ public class ScoreManager : MonoBehaviour
     public Text scoreText;
     private int score = 0;
 
-    public int targetScore = 5;           // คะแนนที่ต้องถึง
-    public GameObject winTextObject;        // ข้อความ “You Win” หรือ UI แจ้งจบเกม
+    public int targetScore = 5;                 // คะแนนที่ต้องถึง
+    public string winSceneName = "Win";    // ชื่อฉากที่ต้องโหลดเมื่อชนะ
 
     private void Awake()
     {
@@ -25,22 +25,13 @@ public class ScoreManager : MonoBehaviour
 
         if (score >= targetScore)
         {
-            EndGame();
+            LoadWinScene();
         }
     }
 
-    void EndGame()
+    void LoadWinScene()
     {
         Debug.Log("Win! 🎉");
-
-        if (winTextObject != null)
-            winTextObject.SetActive(true);
-        Time.timeScale = 1f;
-
-        // หรือถ้าจะโหลดฉากใหม่:
-        // SceneManager.LoadScene("ชื่อฉากถัดไป");
-
-        // หรือหยุดเกม (ใน Editor เท่านั้น):
-        // UnityEditor.EditorApplication.isPlaying = false;
+        SceneManager.LoadScene("Win");
     }
 }

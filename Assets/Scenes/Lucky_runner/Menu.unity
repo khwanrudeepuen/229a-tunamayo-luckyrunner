@@ -129,7 +129,6 @@ GameObject:
   m_Component:
   - component: {fileID: 586137950}
   - component: {fileID: 586137949}
-  - component: {fileID: 586137948}
   m_Layer: 0
   m_Name: Logoluckkyrunner_0
   m_TagString: Untagged
@@ -137,28 +136,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &586137948
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586137947}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 49fdda6bf9a351c4ca0eaaa40b59b68f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &586137949
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -549,7 +526,7 @@ GameObject:
   - component: {fileID: 1189326577}
   - component: {fileID: 1189326576}
   m_Layer: 5
-  m_Name: Mene
+  m_Name: Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -772,6 +749,7 @@ GameObject:
   - component: {fileID: 2097566609}
   - component: {fileID: 2097566608}
   - component: {fileID: 2097566607}
+  - component: {fileID: 2097566610}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -841,7 +819,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2097566608}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2097566610}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &2097566608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -880,6 +870,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097566605}
   m_CullTransparentMesh: 1
+--- !u!114 &2097566610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097566605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3af5ed630f70554ca36f8ceba03e731, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -34,7 +34,7 @@ public class PlayerMovemant : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground"))
         { 
-           isJumping = false;
+            isJumping = false;
         }
     }
     private void OnCollisionExit2D(Collision2D other)
